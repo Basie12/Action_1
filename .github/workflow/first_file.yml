@@ -1,0 +1,12 @@
+nmae: First GitHub Action
+on: push
+jobs:
+  first-job:
+    runs-on:ubuntu latest
+    steps:
+    - name:Hello Ai
+      run:echo "First GA Jobs"
+    - name:List files
+      run:ls 
+    - name: Read files
+      run: cat README.md
