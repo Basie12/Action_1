@@ -6,9 +6,17 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v4
-    - name: Hello Ai
-      run: echo "First GA Jobs"
-    - name: List files
-      run: ls
-    - name: Read files
-      run: cat README.md
+    - name: List and Read Files
+      run: |
+        echo "First GA Jobs"
+        ls -ltra
+        cat README.md
+    - name: Install cowsay
+      run: sudo apt-get update && sudo apt-get install -y cowsay
+    - name: Generate ASCII Artwork
+      run: cowsay -f dragon "Run run for cover, I am DRAGON ...RAWR" >> animal.txt
+
+    # - name: List files
+    #   run: ls
+    # - name: Read files
+    #   run: cat README.md
